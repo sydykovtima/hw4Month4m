@@ -72,11 +72,12 @@ class ViewController: UIViewController {
             typeOfOrderCollectionView.delegate = self
             typeOfOrderCollectionView.register(UINib(nibName:
             String(describing: OrderTypeCollectionViewCell.self),
-            bundle: nil), forCellWithReuseIdentifier:    OrderTypeCollectionViewCell.reuseIdentifierForOrderType)
+            bundle: nil), forCellWithReuseIdentifier: OrderTypeCollectionViewCell.reuseIdentifierForOrderType)
             categoryCollectionView.register(UINib(nibName: String(
             describing: CategoryCollectionViewCell.self), bundle: nil),
             forCellWithReuseIdentifier: CategoryCollectionViewCell.reuseIdentifier)
-            productTableView.register(UINib(nibName: String( describing: ProductTableViewCell.self) , bundle: nil), forCellReuseIdentifier: ProductTableViewCell.reuseIdentifier)
+            productTableView.register(UINib(nibName: String( describing: ProductTableViewCell.self)
+            , bundle: nil), forCellReuseIdentifier: ProductTableViewCell.reuseIdentifier)
                 }
             }
 
@@ -117,7 +118,8 @@ class ViewController: UIViewController {
             return orderType.count
         }
         
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath
+             ) -> UICollectionViewCell {
             if collectionView == categoryCollectionView {
                 let cell = collectionView.dequeueReusableCell(
                     withReuseIdentifier: CategoryCollectionViewCell.reuseIdentifier,
